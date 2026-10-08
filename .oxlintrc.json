@@ -1,0 +1,20 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "categories": {
+    "correctness": "error"
+  },
+  "overrides": [
+    {
+      "files": ["ui/utils.ts", "workspaces/backend.ts"],
+      "rules": {
+        "no-control-regex": "off"
+      }
+    },
+    {
+      "files": ["shared/fs.ts", "workspaces/lock.ts"],
+      "rules": {
+        "no-unsafe-finally": "off"
+      }
+    }
+  ]
+}

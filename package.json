@@ -1,0 +1,63 @@
+{
+  "name": "@rentezzy/pi-workspaces",
+  "version": "0.1.0",
+  "description": "Independent Git workspaces and session navigation for Pi, backed by Rift.",
+  "keywords": [
+    "git",
+    "pi",
+    "pi-package",
+    "workspaces"
+  ],
+  "homepage": "https://github.com/rentezzy/pi-workspaces#readme",
+  "bugs": {
+    "url": "https://github.com/rentezzy/pi-workspaces/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rentezzy/pi-workspaces.git"
+  },
+  "files": [
+    "index.ts",
+    "commands/",
+    "config/",
+    "git/",
+    "sessions/",
+    "shared/",
+    "tools/",
+    "ui/",
+    "workspaces/"
+  ],
+  "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "lint": "oxlint .",
+    "lint:fix": "oxlint --fix .",
+    "format": "oxfmt --write .",
+    "format:check": "oxfmt --check .",
+    "typecheck": "tsc --noEmit",
+    "check": "bun run lint && bun run format:check && bun run typecheck",
+    "publish": "bun run check && npm version patch -m \"chore(release): v%s\" && bun publish --access public --ignore-scripts"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "^1.0.1",
+    "@earendil-works/pi-tui": "^1.0.1",
+    "@types/bun": "^1.4.2",
+    "oxfmt": "^0.72.0",
+    "oxlint": "^1.87.0",
+    "typebox": "^1.3.27",
+    "typescript": "^5.9.3"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*",
+    "@earendil-works/pi-tui": "*",
+    "typebox": "*"
+  },
+  "packageManager": "bun@1.4.0",
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}

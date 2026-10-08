@@ -1,0 +1,11 @@
+export const PRIVATE_FILE_MODE = 0o600;
+export const PRIVATE_DIRECTORY_MODE = 0o700;
+export const COMMAND_OUTPUT_LIMIT = 128 * 1024 * 1024;
+export const COMMAND_STDERR_LIMIT = 16000;
+
+export const GIT_ENVIRONMENT = {
+  GIT_TERMINAL_PROMPT: "0",
+  GIT_EDITOR: "true",
+  GIT_SEQUENCE_EDITOR: "true",
+  GIT_CONFIG_NOSYSTEM: "1",
+};
