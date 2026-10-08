@@ -12,6 +12,7 @@
   "bugs": {
     "url": "https://github.com/rentezzy/pi-workspaces/issues"
   },
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rentezzy/pi-workspaces.git"
